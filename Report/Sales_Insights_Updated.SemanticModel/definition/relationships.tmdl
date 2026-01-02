@@ -1,0 +1,26 @@
+relationship 5a87a3a8-a85f-4b61-934e-a4631c7c4137
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'sales date'.date
+	toColumn: LocalDateTable_e4d3deef-2298-4666-8692-5bb88de4109b.Date
+
+relationship 9cd9708c-99a8-4f50-b116-6a899f693e35
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'sales date'.cy_date
+	toColumn: LocalDateTable_bbe9969d-c270-49b4-a273-38557f2de197.Date
+
+relationship AutoDetected_8d3ce75c-41a9-4cc4-8c2e-4a65d7cb6efa
+	fromColumn: 'sales transactions'.customer_code
+	toColumn: 'sales customers'.customer_code
+
+relationship AutoDetected_dbf69fc3-4de8-47b7-b10f-0a2279f1b16e
+	fromColumn: 'sales transactions'.product_code
+	toColumn: 'sales products'.product_code
+
+relationship 9e57d3b3-7450-1c36-9257-0a95e72e2c27
+	fromColumn: 'sales transactions'.market_code
+	toColumn: 'sales markets'.markets_code
+
+relationship bfcc982a-33d4-0a74-624a-e5c1b5a85741
+	fromColumn: 'sales transactions'.order_date
+	toColumn: 'sales date'.date
+

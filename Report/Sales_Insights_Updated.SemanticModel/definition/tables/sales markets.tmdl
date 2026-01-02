@@ -1,0 +1,41 @@
+table 'sales markets'
+	lineageTag: c49950bc-bc3c-4ff7-b586-04ba90b9474e
+
+	column markets_code
+		dataType: string
+		lineageTag: 12c40946-3317-4a46-a93f-94d652f01d7f
+		summarizeBy: none
+		sourceColumn: markets_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column markets_name
+		dataType: string
+		lineageTag: ec1e7609-e4f1-4c68-8af7-70128bf92863
+		summarizeBy: none
+		sourceColumn: markets_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column zone
+		dataType: string
+		lineageTag: 6e2307e0-0f6c-45e4-98f4-827a742ca8be
+		summarizeBy: none
+		sourceColumn: zone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'sales markets' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost", "sales", [ReturnSingleDatabase=true]),
+				    sales_markets = Source{[Schema="sales",Item="markets"]}[Data],
+				    #"removed blank rows from ""zone"" column" = Table.SelectRows(sales_markets, each ([zone] <> ""))
+				in
+				    #"removed blank rows from ""zone"" column"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

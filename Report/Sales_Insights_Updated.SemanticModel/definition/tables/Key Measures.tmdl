@@ -1,0 +1,104 @@
+table 'Key Measures'
+	lineageTag: 830008c9-dd8b-4107-bc9b-c3a55825bbde
+
+	measure Revenue = SUM('sales transactions'[sales_amount])
+		formatString: "₹"#,0;#,0\ -"₹";"₹"#,0
+		lineageTag: e9f41007-01ef-4c91-aabe-6035205f8917
+
+		annotation PBI_FormatHint = {"currencyCulture":"hi-IN"}
+
+	measure 'Sales Qty' = SUM('sales transactions'[sales_qty])
+		formatString: 0
+		lineageTag: 75dba01d-1518-4dc7-888d-381df81831fd
+
+	measure 'Total Profit Margin' = SUM('sales transactions'[profit_margin])
+		formatString: "₹"#,0.0;#,0.0\ -"₹";"₹"#,0.0
+		lineageTag: 970cde7d-3c73-481f-ab69-7da6b1ffd7c8
+
+		annotation PBI_FormatHint = {"currencyCulture":"hi-IN"}
+
+	measure 'Revenue Contribution %' = DIVIDE([Revenue],CALCULATE([Revenue],ALL('sales customers'), ALL('sales markets'),ALL('sales products')))
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: c6a2fca5-53e5-41d2-90e8-714cb9d370b7
+
+	measure 'Profit Margin %' = DIVIDE([Total Profit Margin],[Revenue],0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a31d82a6-75ec-4863-9247-e38c4e2d10d1
+
+	measure 'Profit Margin Contribution %' = DIVIDE([Total Profit Margin],CALCULATE([Total Profit Margin],ALL('sales customers'),ALL('sales markets'),ALL('sales products')))
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a76f5a8e-948f-4aeb-9d8e-40bdbad0072c
+
+	measure 'Revenue LY' = CALCULATE([Revenue],SAMEPERIODLASTYEAR('sales date'[date]))
+		formatString: #,0
+		lineageTag: f119572f-f3fb-43e4-a407-99729b7aa7fc
+
+	measure 'Target Diff' = [Profit Margin %]-'Profit Target'[Profit Target Value]
+		lineageTag: 00cbacee-e35e-4c59-9ed1-7777ddc877f1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit Margin Bg Color' = ```
+			
+			VAR Margin = [Profit Margin %]
+			RETURN
+			IF(
+			    Margin < 0,
+			    "#C00000",   -- red for negative
+			    ""      
+			)
+			
+			```
+		lineageTag: 682d320a-5a93-420d-894e-4e9d9d1b5293
+
+	measure 'Profit Margin Font Color' = ```
+			
+			VAR Margin = [Profit Margin %]
+			RETURN
+			IF(
+			    Margin < 0,
+			    "#FFFFFF",   -- white for negative
+			    ""      
+			)
+			
+			```
+		lineageTag: 90196525-7314-41d2-80df-1bd2e2837ca9
+
+	measure 'Profit Margin Contri % Bg Color' = ```
+			
+			VAR Margin = [Profit Margin Contribution %]
+			RETURN
+			IF(
+			    Margin < 0,
+			    "#C00000",   -- red for negative
+			    ""      
+			)
+			
+			```
+		lineageTag: 869a2551-86c0-4a4e-a1be-6109eb8ba3fa
+
+	measure 'Profit Margin Contri % Font Color' = ```
+			
+			VAR Margin = [Profit Margin Contribution %]
+			RETURN
+			IF(
+			    Margin < 0,
+			    "#FFFFFF",   -- white for negative
+			    ""      
+			)
+			
+			```
+		lineageTag: 12411ffd-f05b-4621-8d26-b06381d97519
+
+	partition 'Key Measures' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

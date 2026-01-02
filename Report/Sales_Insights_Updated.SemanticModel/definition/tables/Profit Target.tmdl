@@ -1,0 +1,27 @@
+table 'Profit Target'
+	lineageTag: d675da76-a23c-41d8-aeb5-079fdd054160
+
+	measure 'Profit Target Value' = SELECTEDVALUE('Profit Target'[Profit Target])
+		lineageTag: 6a597cdf-8d5f-4468-a8f9-b4d6f7cd8d32
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Profit Target'
+		formatString: 0%;-0%;0%
+		lineageTag: 5b585364-9e13-45ea-b610-1293bfee237a
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Profit Target' = calculated
+		mode: import
+		source = GENERATESERIES(-0.05, 0.15, 0.01)
+
+	annotation PBI_Id = 1990da7be2754c5d8232f40b978455c8
+
