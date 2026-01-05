@@ -153,8 +153,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0
+                      "ColorId": 5,
+                      "Percent": 0.4
                     }
                   }
                 }
@@ -218,10 +218,18 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#B1CAE1'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -278,7 +286,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fc214c2a8bf7c8cdd127",
+        "name": "900d1ffeea5970d9ea11",
         "field": {
           "Column": {
             "Expression": {

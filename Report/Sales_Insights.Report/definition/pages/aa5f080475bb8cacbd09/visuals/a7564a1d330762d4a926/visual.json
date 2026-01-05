@@ -106,10 +106,10 @@
       "valueAxis": [
         {
           "properties": {
-            "gridlineShow": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -120,17 +120,10 @@
                 }
               }
             },
-            "bold": {
+            "gridlineShow": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "false"
                 }
               }
             }
@@ -140,6 +133,13 @@
       "categoryAxis": [
         {
           "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "gridlineShow": {
               "expr": {
                 "Literal": {
@@ -151,20 +151,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "axisType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Scalar'"
                 }
               }
             }
@@ -178,9 +164,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#E31212'"
                     }
                   }
                 }
@@ -198,26 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E0EDF9'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Key Measures.Revenue LY"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0
+                      "Value": "'#2563EB'"
                     }
                   }
                 }
@@ -234,9 +200,26 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#b3b3b3'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Key Measures.Revenue LY"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F2144C'"
                     }
                   }
                 }
@@ -245,40 +228,6 @@
           },
           "selector": {
             "metadata": "Key Measures.Profit Margin %"
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "matchLineColor": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
           }
         }
       ],
@@ -314,27 +263,6 @@
                 }
               }
             },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -344,6 +272,20 @@
                       "Percent": -0.6
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -365,7 +307,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B1CAE1'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -396,7 +338,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B1CAE1'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }

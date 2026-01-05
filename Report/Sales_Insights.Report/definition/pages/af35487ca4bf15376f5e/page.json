@@ -14,23 +14,14 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'pastel-blue-vignette-concrete-textured-background.jpg'"
+                    "Value": "''"
                   }
                 }
               },
               "url": {
                 "expr": {
-                  "ResourcePackageItem": {
-                    "PackageName": "RegisteredResources",
-                    "PackageType": 1,
-                    "ItemName": "pastel-blue-vignette-concrete-8691610017277043.jpg"
-                  }
-                }
-              },
-              "scaling": {
-                "expr": {
                   "Literal": {
-                    "Value": "'Normal'"
+                    "Value": "''"
                   }
                 }
               }
@@ -40,6 +31,17 @@
             "expr": {
               "Literal": {
                 "Value": "0D"
+              }
+            }
+          },
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F7F8FA'"
+                  }
+                }
               }
             }
           }
