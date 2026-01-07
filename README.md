@@ -4,7 +4,7 @@ This is a project I replicated from Codebasics PowerBi Youtube playlist. You can
 
 [Codebasics Youtube Playlist](https://youtube.com/playlist?list=PLeo1K3hjS3uva8pk1FI3iK9kCOKQdz1I9)
 
-[Live Report Link](https://app.powerbi.com/groups/me/reports/43a621ab-9e03-4b04-ac77-23c76d51a4ff/aa5f080475bb8cacbd09?experience=power-bi)
+[Live Report Link](https://app.powerbi.com/view?r=eyJrIjoiYjBlYWVkZDMtMWEyNC00NDhiLWE1NTQtNjU4ZjVkMmQ3OWRjIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
 ## Problem statement
 
