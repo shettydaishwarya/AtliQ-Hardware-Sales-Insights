@@ -2,8 +2,6 @@
 
 This is a project I replicated from Codebasics PowerBi Youtube playlist. You can find the link of the playlist below.
 
-[Codebasics Youtube Playlist](https://youtube.com/playlist?list=PLeo1K3hjS3uva8pk1FI3iK9kCOKQdz1I9)
-
 [Live Report Link](https://app.powerbi.com/view?r=eyJrIjoiYjBlYWVkZDMtMWEyNC00NDhiLWE1NTQtNjU4ZjVkMmQ3OWRjIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
 ## Problem statement
