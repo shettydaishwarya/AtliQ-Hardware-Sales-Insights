@@ -22,9 +22,6 @@ visual representation to make data driven decisions. So, he hired a team of data
 4. In the currency there were two types of currencies in transactions, performed currency conversion to make all the currency type same
 5. Created required measures and used them for creating visuals in PowerBi.
 
-## Info Page
- <img src="Resources\Info.PNG" width="800" class="center">
-
  ## Key Insights
  <img src="Resources\Key Insights.PNG" width="800" class="center">
 
