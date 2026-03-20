@@ -1,6 +1,6 @@
 # AtliQ Sales Insights PowerBi Dashboard
 
-This is a project I replicated from Codebasics PowerBi Youtube playlist. You can find the link of the playlist below.
+This project is built as part of Codebasics Data Analyst Bootcamp.
 
 [Live Report Link](https://app.powerbi.com/view?r=eyJrIjoiYjBlYWVkZDMtMWEyNC00NDhiLWE1NTQtNjU4ZjVkMmQ3OWRjIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
